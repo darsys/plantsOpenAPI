@@ -1,0 +1,45 @@
+components:
+  schemas:
+    plantType:
+     type: string
+     enum:
+        - Forb/Herb
+        - Graminoid
+        - Lichenous
+        - Nonvascular
+        - Shrub
+        - Tree
+        - Vine
+    germinationType:
+     type: string
+     enum:
+        - A
+        - C30
+        - C60
+        - C90
+    lifecycle:
+      type: string
+      enum:
+        - Annual
+        - Perennial
+        - Biennial
+    soil:
+      type: string
+      enum:
+        - Sand
+        - Loam
+        - Clay
+    light:
+      type: string
+      enum:
+        - Full
+        - Partial
+        - Shade
+    moisture:
+      type: string
+      enum:
+        - Wet
+        - Medium-Wet
+        - Medium
+        - Medium-Dry
+        - Dry
