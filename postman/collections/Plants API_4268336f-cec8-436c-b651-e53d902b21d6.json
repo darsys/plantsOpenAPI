@@ -1,0 +1,379 @@
+{
+    "info": {
+        "_postman_id": "a92f742d-64b6-4489-90bc-3df3a7bfc6f5",
+        "name": "Plants API",
+        "description": "A simple API for plants and lists",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "plants",
+            "item": [
+                {
+                    "name": "/plants",
+                    "id": "b9f36fe0-f11c-4c04-84e7-2e5753de25c5",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/plants?limit=-46452161&offset=-46452161",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "plants"
+                            ],
+                            "query": [
+                                {
+                                    "key": "limit",
+                                    "value": "-46452161",
+                                    "description": "Limits the number of items on a page"
+                                },
+                                {
+                                    "key": "offset",
+                                    "value": "-46452161",
+                                    "description": "Specifies the page number of the artists to be displayed"
+                                }
+                            ]
+                        },
+                        "description": "Returns a list of plants"
+                    },
+                    "response": [
+                        {
+                            "id": "d244575c-6e45-41e0-87d4-3d2fc3718e7c",
+                            "name": "Successfully returned a list of palnts",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/plants?limit=-46452161&offset=-46452161",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "plants"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "limit",
+                                            "value": "-46452161"
+                                        },
+                                        {
+                                            "key": "offset",
+                                            "value": "-46452161"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "[\n {\n  \"id\": 1,\n  \"created\": \"2021-01-30\",\n  \"lastUpdated\": \"2021-01-30\",\n  \"latin_name\": \"esse et reprehenderit Lorem\",\n  \"common_name\": [\n   \"tempor cillum sunt\",\n   \"est\"\n  ],\n  \"description\": \"fugiat nisi\",\n  \"plantType\": \"Biennial\",\n  \"price_per_oz\": -99001191,\n  \"seeds_per_oz\": 72805866,\n  \"germinationTypes\": [\n   \"C60\",\n   \"C90\"\n  ],\n  \"lifecycle\": \"Biennial\",\n  \"soils\": [\n   \"Sand\",\n   \"Loam\"\n  ],\n  \"lights\": [\n   \"Full\",\n   \"Full\"\n  ],\n  \"moistures\": [\n   \"Dry\",\n   \"Medium-Dry\"\n  ]\n },\n {\n  \"id\": 1,\n  \"created\": \"2021-01-30\",\n  \"lastUpdated\": \"2021-01-30\",\n  \"latin_name\": \"ut amet Excepteur laborum\",\n  \"common_name\": [\n   \"cillum est\",\n   \"do laborum adipisicing\"\n  ],\n  \"description\": \"labore\",\n  \"plantType\": \"Annual\",\n  \"price_per_oz\": -6351663,\n  \"seeds_per_oz\": 49143711,\n  \"germinationTypes\": [\n   \"A\",\n   \"C90\"\n  ],\n  \"lifecycle\": \"Perennial\",\n  \"soils\": [\n   \"Clay\",\n   \"Loam\"\n  ],\n  \"lights\": [\n   \"Partial\",\n   \"Partial\"\n  ],\n  \"moistures\": [\n   \"Medium\",\n   \"Medium-Dry\"\n  ]\n }\n]"
+                        },
+                        {
+                            "id": "1b694264-d94f-4fff-b214-277dd4668458",
+                            "name": "Invalid request",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/plants?limit=-46452161&offset=-46452161",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "plants"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "limit",
+                                            "value": "-46452161"
+                                        },
+                                        {
+                                            "key": "offset",
+                                            "value": "-46452161"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "Bad Request",
+                            "code": 400,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"message\": \"Excepteur dol\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "/plants",
+                    "id": "47dd3f1c-0369-4be1-870b-09d9d7175039",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"id\": 1,\n    \"created\": \"2021-01-30\",\n    \"lastUpdated\": \"2021-01-30\",\n    \"latin_name\": \"proident nulla\",\n    \"common_name\": [\n        \"id\",\n        \"Lorem est\"\n    ],\n    \"description\": \"sunt enim veniam ut\",\n    \"plantType\": \"Perennial\",\n    \"price_per_oz\": -63021130,\n    \"seeds_per_oz\": 15559522,\n    \"germinationTypes\": [\n        \"C30\",\n        \"C60\"\n    ],\n    \"lifecycle\": \"Perennial\",\n    \"soils\": [\n        \"Sand\",\n        \"Clay\"\n    ],\n    \"lights\": [\n        \"Shade\",\n        \"Full\"\n    ],\n    \"moistures\": [\n        \"Medium\",\n        \"Dry\"\n    ]\n}"
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/plants",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "plants"
+                            ]
+                        },
+                        "description": "Lets a user post a new plant"
+                    },
+                    "response": [
+                        {
+                            "id": "a3adfc82-d194-428b-bbf9-0cdf32362943",
+                            "name": "Successfully created a new plant",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"id\": 1,\n    \"created\": \"2021-01-30\",\n    \"lastUpdated\": \"2021-01-30\",\n    \"latin_name\": \"proident nulla\",\n    \"common_name\": [\n        \"id\",\n        \"Lorem est\"\n    ],\n    \"description\": \"sunt enim veniam ut\",\n    \"plantType\": \"Perennial\",\n    \"price_per_oz\": -63021130,\n    \"seeds_per_oz\": 15559522,\n    \"germinationTypes\": [\n        \"C30\",\n        \"C60\"\n    ],\n    \"lifecycle\": \"Perennial\",\n    \"soils\": [\n        \"Sand\",\n        \"Clay\"\n    ],\n    \"lights\": [\n        \"Shade\",\n        \"Full\"\n    ],\n    \"moistures\": [\n        \"Medium\",\n        \"Dry\"\n    ]\n}"
+                                },
+                                "url": {
+                                    "raw": "{{baseUrl}}/plants",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "plants"
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "text",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "text/plain"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": ""
+                        },
+                        {
+                            "id": "96f2aea2-01dd-4ea7-b735-b9198b4a05ca",
+                            "name": "Invalid request",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"id\": 1,\n    \"created\": \"2021-01-30\",\n    \"lastUpdated\": \"2021-01-30\",\n    \"latin_name\": \"proident nulla\",\n    \"common_name\": [\n        \"id\",\n        \"Lorem est\"\n    ],\n    \"description\": \"sunt enim veniam ut\",\n    \"plantType\": \"Perennial\",\n    \"price_per_oz\": -63021130,\n    \"seeds_per_oz\": 15559522,\n    \"germinationTypes\": [\n        \"C30\",\n        \"C60\"\n    ],\n    \"lifecycle\": \"Perennial\",\n    \"soils\": [\n        \"Sand\",\n        \"Clay\"\n    ],\n    \"lights\": [\n        \"Shade\",\n        \"Full\"\n    ],\n    \"moistures\": [\n        \"Medium\",\n        \"Dry\"\n    ]\n}"
+                                },
+                                "url": {
+                                    "raw": "{{baseUrl}}/plants",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "plants"
+                                    ]
+                                }
+                            },
+                            "status": "Bad Request",
+                            "code": 400,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"message\": \"Excepteur dol\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "/plants/:username",
+                    "id": "78aa43bb-3c7e-4a40-b384-666fbc104ac4",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/plants/:username",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "plants",
+                                ":username"
+                            ],
+                            "variable": [
+                                {
+                                    "id": "7fc0f5e3-8b32-4c8d-b7d1-189f21d591af",
+                                    "key": "username",
+                                    "value": "reprehenderit esse sed",
+                                    "description": "(Required) "
+                                }
+                            ]
+                        },
+                        "description": "Obtain information about an artist from his or her unique username"
+                    },
+                    "response": [
+                        {
+                            "id": "5def5593-ee84-446f-8367-58b45d7e78d1",
+                            "name": "Successfully returned an artist",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/plants/:username",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "plants",
+                                        ":username"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "username"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"artist_name\": \"in occaecat sint ex\",\n \"artist_genre\": \"in eu\",\n \"albums_recorded\": -26233333\n}"
+                        },
+                        {
+                            "id": "63a8de04-e7f3-4c23-a245-cd15e0d8a214",
+                            "name": "Invalid request",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: basic",
+                                        "key": "Authorization",
+                                        "value": "Basic <credentials>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/plants/:username",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "plants",
+                                        ":username"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "username"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "Bad Request",
+                            "code": 400,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n \"message\": \"Excepteur dol\"\n}"
+                        }
+                    ]
+                }
+            ],
+            "id": "81ab9781-62a5-493e-a05e-8acfbf2fcc65"
+        }
+    ],
+    "auth": {
+        "type": "basic",
+        "basic": [
+            {
+                "key": "username",
+                "value": "<Basic Auth Username>",
+                "type": "string"
+            },
+            {
+                "key": "password",
+                "value": "<Basic Auth Password>",
+                "type": "string"
+            }
+        ]
+    },
+    "variable": [
+        {
+            "id": "a762c513-ea61-4fed-86e7-dd21710da061",
+            "key": "baseUrl",
+            "value": "https://plants.tayoby.com",
+            "type": "string"
+        }
+    ]
+}
